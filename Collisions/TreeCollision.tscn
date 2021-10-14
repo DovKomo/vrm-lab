@@ -5,8 +5,9 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 62.7462, 154.554, 142.377 )
 
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 55.5168, 52.7527, 71.0157 )
+[sub_resource type="CylinderShape" id=2]
+radius = 66.314
+height = 155.59
 
 [node name="tree" instance=ExtResource( 1 )]
 
@@ -18,5 +19,5 @@ transform = Transform( -4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4
 shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 1.42109e-14, 0, -1.42109e-14, 1, 0, -6.95477, -71.8668 )
+transform = Transform( 1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 8.47033e-22, -4.37114e-08, 1, -4.37114e-08, 0, 0, -71.867 )
 shape = SubResource( 2 )

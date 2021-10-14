@@ -3,7 +3,7 @@
 [ext_resource path="res://Collisions/BearSmallCollision.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Collisions/TrolleyCollision.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Collisions/RockCollision.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Geometry/Fire/fire.glb" type="PackedScene" id=4]
+[ext_resource path="res://Collisions/FireCollision.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Collisions/MexicoGrassCollision.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Collisions/ApplesCollision.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Collisions/PumpkinCollision.tscn" type="PackedScene" id=7]
@@ -18,12 +18,12 @@
 [ext_resource path="res://Collisions/WellCollision.tscn" type="PackedScene" id=16]
 
 [node name="Spatial" type="Spatial"]
-transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, 0.354718, 0.0382566, 0.00389099 )
+transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, 0.461429, 0.183955, 0.587466 )
 
-[node name="tree4" parent="." instance=ExtResource( 9 )]
+[node name="tree3" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.499214, 0, 0.866479, 0, 1, 0, -0.866479, 0, -0.499214, 2.09, 0, -1.518 )
 
-[node name="tree2" parent="." instance=ExtResource( 9 )]
+[node name="tree" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.438332, 0, 1.43453, 0, 1.5, 0, -1.43453, 0, 0.438332, 4.56, 0, -0.245 )
 
 [node name="rock3" parent="." instance=ExtResource( 3 )]
@@ -38,17 +38,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.305, 1.604, 1.417 )
 [node name="apples2" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252, 0.382, -1.62 )
 
-[node name="fire" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.65975, 0.02, -0.594002 )
-
 [node name="pumpkin2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.207, 0.36, -2.05 )
 
 [node name="sleeping_bag2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.914035, 0, -0.405636, 0, 1, 0, 0.405636, 0, 0.914035, -2.423, 0, -1.303 )
+transform = Transform( 0.914035, 0, -0.405636, 0, 1, 0, 0.405636, 0, 0.914035, -2.423, 0.1, -1.303 )
 
-[node name="well2" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008, 0, 0.98 )
+[node name="well" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.40859e-05, 0, 0.0431321 )
 
 [node name="bear3" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.847205, 0, -0.531265, 0, 1, 0, 0.531265, 0, 0.847205, 2.811, 0, -1.202 )
@@ -60,19 +57,19 @@ transform = Transform( 0.723353, 0, -0.690479, 0, 1, 0, 0.690479, 0, 0.723353, 2
 transform = Transform( 0.709509, 0, 0.704696, 0, 1, 0, -0.704696, 0, 0.709509, -1.655, 0, 4.032 )
 
 [node name="tree_stump2" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.364, 0, -1.746 )
+transform = Transform( 1, -0.000104943, 6.37956e-07, 0.000104943, 0.999926, -0.0121467, 6.37956e-07, 0.0121467, 0.999926, -1.41387, -0.202996, -1.73383 )
 
 [node name="outhouse2" parent="." instance=ExtResource( 15 )]
 transform = Transform( -0.0462697, 0, -0.998929, 0, 1, 0, 0.998929, 0, -0.0462697, 4.135, 0.06, 4.722 )
 
 [node name="water_clay2" parent="." instance=ExtResource( 13 )]
-transform = Transform( 0.833134, 0, -0.553072, 0, 1, 0, 0.553072, 0, 0.833134, -1.248, 0.701, -1.755 )
+transform = Transform( 0.833134, 0, -0.553072, 0, 1, 0, 0.553072, 0, 0.833134, -1.248, 0.478006, -1.755 )
 
 [node name="small_table2" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.979056, 0, -0.20359, 0, 1, 0, 0.20359, 0, 0.979056, 0.204, 0, -1.787 )
 
 [node name="grass3d_2" parent="." instance=ExtResource( 14 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+transform = Transform( -4.37722e-08, 0, 1, 0, 1, 0, -1, 0, -4.37722e-08, 0, 0, 0 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.252137, 0, -0.967691, 0, 1, 0, 0.967691, 0, 0.252137, -10.7629, 6.05829, 4.02961 )
@@ -80,3 +77,6 @@ transform = Transform( 0.252137, 0, -0.967691, 0, 1, 0, 0.967691, 0, 0.252137, -
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 3.81842e-08, 0, -1, 0, 1, 0, 1, 0, 3.81842e-08, -18.9602, 6.45403, 1.25939 )
 fov = 50.5537
+
+[node name="fire2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48368, 0, -0.230294 )
