@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Collisions/BearSmallCollision.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Collisions/TrolleyCollision.tscn" type="PackedScene" id=2]
@@ -16,6 +16,10 @@
 [ext_resource path="res://Collisions/Grass3dCollision.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Collisions/OuthouseCollision.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Collisions/WellCollision.tscn" type="PackedScene" id=16]
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=17]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.0522985
 
 [node name="Spatial" type="Spatial"]
 transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, 0.461429, 0.183955, 0.587466 )
@@ -45,7 +49,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.207, 0.36, -2.05 )
 transform = Transform( 0.914035, 0, -0.405636, 0, 1, 0, 0.405636, 0, 0.914035, -2.423, 0.1, -1.303 )
 
 [node name="well" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.40859e-05, 0, 0.0431321 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.40561e-05, 0, 0.0431321 )
 
 [node name="bear3" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.847205, 0, -0.531265, 0, 1, 0, 0.531265, 0, 0.847205, 2.811, 0, -1.202 )
@@ -74,9 +78,20 @@ transform = Transform( -4.37722e-08, 0, 1, 0, 1, 0, -1, 0, -4.37722e-08, 0, 0, 0
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.252137, 0, -0.967691, 0, 1, 0, 0.967691, 0, 0.252137, -10.7629, 6.05829, 4.02961 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 3.81842e-08, 0, -1, 0, 1, 0, 1, 0, 3.81842e-08, -18.9602, 6.45403, 1.25939 )
-fov = 50.5537
-
 [node name="fire2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48368, 0, -0.230294 )
+
+[node name="FPSController" parent="." instance=ExtResource( 17 )]
+transform = Transform( -0.0134734, -0.0139351, -0.999812, 0.00752095, 0.999873, -0.0140373, 0.999881, -0.00770866, -0.0133669, -3.74867, 2.38419e-07, 1.24246 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, -0.000577372, 1.93203e-05, 0.000577372, 0.997764, -0.0668287, 1.93138e-05, 0.0668287, 0.997764, -3.03669, 2.05347, 1.28578 )
+mode = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 8.14907e-10, 7.45058e-09, 2.91038e-10, 1, -1.49012e-08, 9.31323e-09, 0, 1, -0.131247, -0.161435, -0.0780463 )
+shape = SubResource( 1 )
+
+[node name="CSGSphere" type="CSGSphere" parent="RigidBody"]
+transform = Transform( 1, 4.65661e-10, 4.65661e-09, 1.16415e-10, 1, 0, 4.65661e-09, 0, 1, -0.131728, -0.161459, -0.0778762 )
+radius = 0.05
