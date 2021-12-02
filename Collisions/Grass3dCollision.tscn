@@ -6,7 +6,7 @@
 extents = Vector3( 0.0530803, 0.597764, 4.49326 )
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 5.49473, 0.0302501, 5.47768 )
+extents = Vector3( 5.49473, 0.0572092, 5.47768 )
 
 [node name="grass3d_1" instance=ExtResource( 1 )]
 

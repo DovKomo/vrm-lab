@@ -87,11 +87,12 @@ transform = Transform( -0.0134734, -0.0139351, -0.999812, 0.00752095, 0.999873, 
 [node name="RigidBody" type="RigidBody" parent="."]
 transform = Transform( 1, -0.000577372, 1.93203e-05, 0.000577372, 0.997764, -0.0668287, 1.93138e-05, 0.0668287, 0.997764, -3.03669, 2.05347, 1.28578 )
 mode = 3
+continuous_cd = true
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
-transform = Transform( 1, 8.14907e-10, 7.45058e-09, 2.91038e-10, 1, -1.49012e-08, 9.31323e-09, 0, 1, -0.131247, -0.161435, -0.0780463 )
+transform = Transform( 1, 8.14907e-10, 7.45058e-09, 2.91038e-10, 1, -1.49012e-08, 9.31323e-09, 0, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="CSGSphere" type="CSGSphere" parent="RigidBody"]
-transform = Transform( 1, 4.65661e-10, 4.65661e-09, 1.16415e-10, 1, 0, 4.65661e-09, 0, 1, -0.131728, -0.161459, -0.0778762 )
+transform = Transform( 1, 4.65661e-10, 4.65661e-09, 1.16415e-10, 1, 0, 4.65661e-09, 0, 1, 0, 0, 0 )
 radius = 0.05
