@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/omelette_plate.obj-df2e2201756010654a38ee0c1d8bac4f.mesh"
+
+[deps]
+
+files=[ "res://.import/omelette_plate.obj-df2e2201756010654a38ee0c1d8bac4f.mesh" ]
+
+source_file="res://Geometry/Omelette/omelette_plate.obj"
+dest_files=[ "res://.import/omelette_plate.obj-df2e2201756010654a38ee0c1d8bac4f.mesh", "res://.import/omelette_plate.obj-df2e2201756010654a38ee0c1d8bac4f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

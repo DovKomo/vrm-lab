@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/full_burger.obj-00c59442deb9f9a059b2cf1023ec92be.mesh"
+
+[deps]
+
+files=[ "res://.import/full_burger.obj-00c59442deb9f9a059b2cf1023ec92be.mesh" ]
+
+source_file="res://Geometry/Hamburger/full_burger.obj"
+dest_files=[ "res://.import/full_burger.obj-00c59442deb9f9a059b2cf1023ec92be.mesh", "res://.import/full_burger.obj-00c59442deb9f9a059b2cf1023ec92be.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

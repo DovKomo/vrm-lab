@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/burger_meat_2.obj-94d1093360e47e3389f49c3a046c95ae.mesh"
+
+[deps]
+
+files=[ "res://.import/burger_meat_2.obj-94d1093360e47e3389f49c3a046c95ae.mesh" ]
+
+source_file="res://Geometry/Hamburger/burger_meat_2.obj"
+dest_files=[ "res://.import/burger_meat_2.obj-94d1093360e47e3389f49c3a046c95ae.mesh", "res://.import/burger_meat_2.obj-94d1093360e47e3389f49c3a046c95ae.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

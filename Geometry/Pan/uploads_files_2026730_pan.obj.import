@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/uploads_files_2026730_pan.obj-9da110c2fc26281c54f37a44245cdc13.mesh"
+
+[deps]
+
+files=[ "res://.import/uploads_files_2026730_pan.obj-9da110c2fc26281c54f37a44245cdc13.mesh" ]
+
+source_file="res://Geometry/Pan/uploads_files_2026730_pan.obj"
+dest_files=[ "res://.import/uploads_files_2026730_pan.obj-9da110c2fc26281c54f37a44245cdc13.mesh", "res://.import/uploads_files_2026730_pan.obj-9da110c2fc26281c54f37a44245cdc13.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Collisions/BearSmallCollision.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Collisions/TrolleyCollision.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Geometry/Table/industrial_cocktail_table.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Collisions/RockCollision.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Collisions/FireCollision.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Collisions/MexicoGrassCollision.tscn" type="PackedScene" id=5]
@@ -17,9 +17,111 @@
 [ext_resource path="res://Collisions/OuthouseCollision.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Collisions/WellCollision.tscn" type="PackedScene" id=16]
 [ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Geometry/CuttingBoard/Cutting board.obj" type="ArrayMesh" id=18]
+[ext_resource path="res://Geometry/Pan/uploads_files_2026730_pan.obj" type="ArrayMesh" id=19]
+[ext_resource path="res://Geometry/Plate/uploads_files_2684507_+plate.obj" type="ArrayMesh" id=20]
+[ext_resource path="res://Geometry/Knife/uploads_files_1924412_02+-+Knife.obj" type="ArrayMesh" id=21]
+[ext_resource path="res://Geometry/Plate/Mat_1.material" type="Material" id=22]
+[ext_resource path="res://Geometry/CuttingBoard/Material_002.material" type="Material" id=23]
+[ext_resource path="res://Geometry/Pan/Leather.material" type="Material" id=24]
+[ext_resource path="res://Geometry/Knife/c3b2fdf4355b.jpg" type="Texture" id=25]
+[ext_resource path="res://Geometry/Knife/10eb4f3be7b1.jpg" type="Texture" id=26]
+[ext_resource path="res://Geometry/Omelette/omelette_plate.obj" type="ArrayMesh" id=27]
+[ext_resource path="res://Geometry/Egg/uploads_files_2059245_Egg_OBJ.obj" type="ArrayMesh" id=28]
+[ext_resource path="res://scenes/omelette_RigidBody.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Geometry/Egg/lambert1.material" type="Material" id=30]
+[ext_resource path="res://scripts/OmeletPlatePlacement.gd" type="Script" id=31]
+[ext_resource path="res://Geometry/Hamburger/burger_bread_1.obj" type="ArrayMesh" id=32]
+[ext_resource path="res://Geometry/Hamburger/burger_top_bread.obj" type="ArrayMesh" id=33]
+[ext_resource path="res://scripts/BurgerPlatePlacement.gd" type="Script" id=34]
+[ext_resource path="res://Geometry/Hamburger/burger_cheese_1.obj" type="ArrayMesh" id=35]
+[ext_resource path="res://scenes/full_burger_RigidBody.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Geometry/Hamburger/burger_salad.obj" type="ArrayMesh" id=37]
+[ext_resource path="res://Geometry/Hamburger/bread_outside__top.material" type="Material" id=39]
+[ext_resource path="res://Geometry/Hamburger/pit.material" type="Material" id=40]
+[ext_resource path="res://Geometry/Table/Metalic.tga" type="Texture" id=45]
+[ext_resource path="res://Geometry/Table/industrial_cocktail_table_cocktail_table_Diffuse.tga" type="Texture" id=46]
+[ext_resource path="res://scenes/omelette_in_plate.tscn" type="PackedScene" id=47]
+[ext_resource path="res://scripts/PanPlacement.gd" type="Script" id=48]
+[ext_resource path="res://scripts/TaskController.gd" type="Script" id=49]
+[ext_resource path="res://scripts/CuttingBoardPlacement.gd" type="Script" id=50]
+[ext_resource path="res://scenes/meat_RigidBody.tscn" type="PackedScene" id=51]
+[ext_resource path="res://scenes/tomato_RigidBody.tscn" type="PackedScene" id=52]
 
-[sub_resource type="SphereShape" id=1]
-radius = 0.0522985
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 1, 0.843137, 0.843137, 1 )
+albedo_texture = ExtResource( 46 )
+metallic_texture = ExtResource( 45 )
+normal_enabled = true
+normal_scale = 1.0
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_texture = ExtResource( 46 )
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_texture = ExtResource( 46 )
+
+[sub_resource type="SpatialMaterial" id=17]
+albedo_color = Color( 1, 0.780392, 0.780392, 1 )
+albedo_texture = ExtResource( 46 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 60.3085, 21.4277, 28.3563 )
+
+[sub_resource type="CylinderShape" id=19]
+radius = 0.245506
+height = 0.0672627
+
+[sub_resource type="CapsuleShape" id=20]
+radius = 0.058376
+height = 0.0138996
+
+[sub_resource type="CylinderShape" id=21]
+radius = 0.137595
+height = 0.0250607
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.615686, 0.552941, 0.552941, 1 )
+
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 0.2462, 0.0208356, 0.172353 )
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 0.0452258, 0.0101464, 0.211449 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 25 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 25 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 25 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 25 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 26 )
+
+[sub_resource type="CylinderShape" id=24]
+radius = 0.187367
+height = 0.0236216
+
+[sub_resource type="CylinderShape" id=25]
+radius = 0.0867633
+height = 0.0286665
+
+[sub_resource type="CylinderShape" id=26]
+radius = 0.0820867
+height = 0.0435176
+
+[sub_resource type="BoxShape" id=27]
+extents = Vector3( 0.0662394, 0.0171605, 0.0656876 )
+
+[sub_resource type="CylinderShape" id=28]
+radius = 0.091767
+height = 0.0191592
 
 [node name="Spatial" type="Spatial"]
 transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, 0.461429, 0.183955, 0.587466 )
@@ -57,9 +159,6 @@ transform = Transform( 0.847205, 0, -0.531265, 0, 1, 0, 0.531265, 0, 0.847205, 2
 [node name="bear4" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.723353, 0, -0.690479, 0, 1, 0, 0.690479, 0, 0.723353, 2.7, 0, 0.054 )
 
-[node name="trolley2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.709509, 0, 0.704696, 0, 1, 0, -0.704696, 0, 0.709509, -1.655, 0, 4.032 )
-
 [node name="tree_stump2" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, -0.000104943, 6.37956e-07, 0.000104943, 0.999926, -0.0121467, 6.37956e-07, 0.0121467, 0.999926, -1.41387, -0.202996, -1.73383 )
 
@@ -82,17 +181,505 @@ transform = Transform( 0.252137, 0, -0.967691, 0, 1, 0, 0.967691, 0, 0.252137, -
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48368, 0, -0.230294 )
 
 [node name="FPSController" parent="." instance=ExtResource( 17 )]
-transform = Transform( -0.0134734, -0.0139351, -0.999812, 0.00752095, 0.999873, -0.0140373, 0.999881, -0.00770866, -0.0133669, -3.74867, 2.38419e-07, 1.24246 )
+transform = Transform( 0.999177, -0.0101457, 0.0392898, 0.00137485, 0.976147, 0.217105, -0.0405553, -0.216872, 0.975358, -1.10437, -0.709379, 4.6801 )
 
-[node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 1, -0.000577372, 1.93203e-05, 0.000577372, 0.997764, -0.0668287, 1.93138e-05, 0.0668287, 0.997764, -3.03669, 2.05347, 1.28578 )
+[node name="table" type="MeshInstance" parent="."]
+transform = Transform( 0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, -1.137, 0, 3.303 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 14 )
+material/1 = SubResource( 15 )
+material/2 = SubResource( 16 )
+material/3 = SubResource( 17 )
+
+[node name="StaticBody" type="StaticBody" parent="table"]
+
+[node name="CollisionShape" type="CollisionShape" parent="table/StaticBody"]
+transform = Transform( 0.999999, 0, 9.31323e-10, 0, 0.999999, 0, -9.31323e-10, 0, 0.999999, -0.859558, 22.9555, 0.329041 )
+shape = SubResource( 2 )
+
+[node name="PanPlacement" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.543728, 0.823888, 3.33717 )
+script = ExtResource( 48 )
+target_name = "egg_RigidBody"
+
+[node name="CollisionShape" type="CollisionShape" parent="PanPlacement"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0170488, -0.116882, -0.00135612 )
+shape = SubResource( 19 )
+
+[node name="pan" type="MeshInstance" parent="PanPlacement"]
+transform = Transform( 0.139798, 0, -0.207259, 0, 0.25, 0, 0.207259, 0, 0.139798, 0, -0.161305, 0 )
+mesh = ExtResource( 19 )
+material/0 = ExtResource( 24 )
+material/1 = ExtResource( 24 )
+
+[node name="TaskController" type="Node" parent="."]
+script = ExtResource( 49 )
+omelette_scene = ExtResource( 29 )
+omelette_in_plate_scene = ExtResource( 47 )
+meat_scene = ExtResource( 51 )
+tomato_scene = ExtResource( 52 )
+burger_scene = ExtResource( 36 )
+
+[node name="egg_RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.959421, 0.661238, 3.09705 )
 mode = 3
 continuous_cd = true
 
-[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
-transform = Transform( 1, 8.14907e-10, 7.45058e-09, 2.91038e-10, 1, -1.49012e-08, 9.31323e-09, 0, 1, 0, 0, 0 )
-shape = SubResource( 1 )
+[node name="CollisionShape" type="CollisionShape" parent="egg_RigidBody"]
+transform = Transform( 0.999923, -0.00863362, 0.00895083, 0.00863364, -0.0361031, -0.999311, 0.00895082, 0.999309, -0.0360258, 0, 0.0536522, 0 )
+shape = SubResource( 20 )
 
-[node name="CSGSphere" type="CSGSphere" parent="RigidBody"]
-transform = Transform( 1, 4.65661e-10, 4.65661e-09, 1.16415e-10, 1, 0, 4.65661e-09, 0, 1, 0, 0, 0 )
-radius = 0.05
+[node name="egg" type="MeshInstance" parent="egg_RigidBody"]
+transform = Transform( 0.01, 0, 5.82077e-11, 0, 0.01, 0, -5.82077e-11, 0, 0.01, 0, 0, 0 )
+mesh = ExtResource( 28 )
+material/0 = ExtResource( 30 )
+
+[node name="OmeletPlatePlacement" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.952102, 0.665213, 3.09385 )
+script = ExtResource( 31 )
+target_name = "omelette_RigidBody"
+
+[node name="CollisionShape" type="CollisionShape" parent="OmeletPlatePlacement"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00344795, 0.0184384, 2.98023e-05 )
+shape = SubResource( 21 )
+
+[node name="omelette_plate" type="MeshInstance" parent="OmeletPlatePlacement"]
+transform = Transform( 0.08, 0, 1.74623e-10, 0, 0.08, 0, -1.74623e-10, 0, 0.08, 0, 0, 0 )
+mesh = ExtResource( 27 )
+material/0 = SubResource( 8 )
+
+[node name="CuttingBoardPlacement" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19029, 0.667593, 3.4918 )
+script = ExtResource( 50 )
+target_meat = "meat_RigidBody"
+target_tomato = "tomato_RigidBody"
+target_knife = "knife_RigidBody"
+
+[node name="CollisionShape" type="CollisionShape" parent="CuttingBoardPlacement"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0179378, 0.0206416, 0.0240183 )
+shape = SubResource( 22 )
+
+[node name="Cutting board" type="MeshInstance" parent="CuttingBoardPlacement"]
+transform = Transform( 0.00983902, 0, 0.139654, 0, 0.14, 0, -0.139654, 0, 0.00983902, 0, 0, 0 )
+mesh = ExtResource( 18 )
+material/0 = ExtResource( 23 )
+
+[node name="tomato_RigidBody" parent="." instance=ExtResource( 52 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37319, 0.573234, 3.04913 )
+
+[node name="meat_RigidBody" parent="." instance=ExtResource( 51 )]
+
+[node name="knife_RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61399, 0.676176, 3.13934 )
+mode = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="knife_RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0315082, -5.96046e-08, 0.00730681 )
+shape = SubResource( 23 )
+
+[node name="knife" type="MeshInstance" parent="knife_RigidBody"]
+transform = Transform( -0.00386623, 0.0396205, -0.0039079, -0.00034393, 0.00389289, 0.0398086, 0.0398112, 0.00388133, -3.56034e-05, 0, 0, 0 )
+mesh = ExtResource( 21 )
+material/0 = SubResource( 3 )
+material/1 = SubResource( 4 )
+material/2 = SubResource( 5 )
+material/3 = SubResource( 6 )
+material/4 = SubResource( 7 )
+
+[node name="BurgerPlatePlacement" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.833, 0.659, 3.547 )
+script = ExtResource( 34 )
+target_bottom_bread_name = "bottom_bread_RigidBody"
+target_meat_name = "meat_RigidBody"
+target_cheese_name = "cheese_RigidBody"
+target_salad_name = "salad_RigidBody"
+target_tomato_name = "tomato_RigidBody"
+target_top_bread_name = "top_bread_RigidBody"
+
+[node name="CollisionShape" type="CollisionShape" parent="BurgerPlatePlacement"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000459194, 0.016732, -5.72205e-06 )
+shape = SubResource( 24 )
+
+[node name="plate" type="MeshInstance" parent="BurgerPlatePlacement"]
+transform = Transform( 0.14, 0, 1.04774e-09, 0, 0.14, 0, -1.04774e-09, 0, 0.14, 0, 0, 0 )
+mesh = ExtResource( 20 )
+material/0 = ExtResource( 22 )
+
+[node name="bottom_bread_RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.717, 0.659, 3.014 )
+mode = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="bottom_bread_RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000475407, 0.017494, 0.00619698 )
+shape = SubResource( 25 )
+
+[node name="burger_bread_1" type="MeshInstance" parent="bottom_bread_RigidBody"]
+transform = Transform( 0.08, 0, 1.21072e-09, 0, 0.08, 0, -1.21072e-09, 0, 0.08, 0, 0, 0 )
+mesh = ExtResource( 32 )
+material/0 = ExtResource( 39 )
+
+[node name="top_bread_RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.935, 0.576, 3.012 )
+mode = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="top_bread_RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00107646, 0.110096, -9.77516e-06 )
+shape = SubResource( 26 )
+
+[node name="burger_top_bread" type="MeshInstance" parent="top_bread_RigidBody"]
+transform = Transform( 0.08, 0, 1.35042e-09, 0, 0.08, 0, -1.35042e-09, 0, 0.08, 0, 0, 0 )
+mesh = ExtResource( 33 )
+material/0 = ExtResource( 39 )
+material/1 = ExtResource( 39 )
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
+material/24 = null
+material/25 = null
+material/26 = null
+material/27 = null
+material/28 = null
+material/29 = null
+material/30 = null
+material/31 = null
+material/32 = null
+material/33 = null
+material/34 = null
+material/35 = null
+material/36 = null
+material/37 = null
+material/38 = null
+material/39 = null
+material/40 = null
+material/41 = null
+material/42 = null
+material/43 = null
+material/44 = null
+material/45 = null
+material/46 = null
+material/47 = null
+material/48 = null
+material/49 = null
+material/50 = null
+material/51 = null
+material/52 = null
+material/53 = null
+material/54 = null
+material/55 = null
+material/56 = null
+material/57 = null
+material/58 = null
+material/59 = null
+material/60 = null
+material/61 = null
+material/62 = null
+material/63 = null
+material/64 = null
+material/65 = null
+material/66 = null
+material/67 = null
+material/68 = null
+material/69 = null
+material/70 = null
+material/71 = null
+material/72 = null
+material/73 = null
+material/74 = null
+material/75 = null
+material/76 = null
+material/77 = null
+material/78 = null
+material/79 = null
+material/80 = null
+material/81 = null
+material/82 = null
+material/83 = null
+material/84 = null
+material/85 = null
+material/86 = null
+material/87 = null
+material/88 = null
+material/89 = null
+material/90 = null
+material/91 = null
+material/92 = null
+material/93 = null
+material/94 = null
+material/95 = null
+material/96 = null
+material/97 = null
+material/98 = null
+material/99 = null
+material/100 = null
+material/101 = null
+material/102 = null
+material/103 = null
+material/104 = null
+material/105 = null
+material/106 = null
+material/107 = null
+material/108 = null
+material/109 = null
+material/110 = null
+material/111 = null
+material/112 = null
+material/113 = null
+material/114 = null
+material/115 = null
+material/116 = null
+material/117 = null
+material/118 = null
+material/119 = null
+material/120 = null
+material/121 = null
+material/122 = null
+material/123 = null
+material/124 = null
+material/125 = null
+material/126 = null
+material/127 = null
+material/128 = null
+material/129 = null
+material/130 = null
+material/131 = null
+material/132 = null
+material/133 = null
+material/134 = null
+material/135 = null
+material/136 = null
+material/137 = null
+material/138 = null
+material/139 = null
+material/140 = null
+material/141 = null
+material/142 = null
+material/143 = null
+material/144 = null
+material/145 = null
+material/146 = null
+material/147 = null
+material/148 = null
+material/149 = null
+material/150 = null
+material/151 = null
+material/152 = null
+material/153 = null
+material/154 = null
+material/155 = null
+material/156 = null
+material/157 = null
+material/158 = null
+material/159 = null
+material/160 = null
+material/161 = null
+material/162 = null
+material/163 = null
+material/164 = null
+material/165 = null
+material/166 = null
+material/167 = null
+material/168 = null
+material/169 = null
+material/170 = null
+material/171 = null
+material/172 = null
+material/173 = null
+material/174 = null
+material/175 = null
+material/176 = null
+material/177 = null
+material/178 = null
+material/179 = null
+material/180 = null
+material/181 = null
+material/182 = null
+material/183 = null
+material/184 = null
+material/185 = null
+material/186 = null
+material/187 = null
+material/188 = null
+material/189 = null
+material/190 = null
+material/191 = null
+material/192 = null
+material/193 = null
+material/194 = null
+material/195 = null
+material/196 = null
+material/197 = null
+material/198 = null
+material/199 = null
+material/200 = null
+material/201 = null
+material/202 = null
+material/203 = null
+material/204 = null
+material/205 = null
+material/206 = null
+material/207 = null
+material/208 = null
+material/209 = null
+material/210 = null
+material/211 = null
+material/212 = null
+material/213 = null
+material/214 = null
+material/215 = null
+material/216 = null
+material/217 = null
+material/218 = null
+material/219 = null
+material/220 = null
+material/221 = null
+material/222 = null
+material/223 = null
+material/224 = null
+material/225 = null
+material/226 = null
+material/227 = null
+material/228 = null
+material/229 = null
+material/230 = null
+material/231 = null
+material/232 = null
+material/233 = null
+material/234 = null
+material/235 = null
+material/236 = null
+material/237 = null
+material/238 = null
+material/239 = null
+material/240 = null
+material/241 = null
+material/242 = null
+material/243 = null
+material/244 = null
+material/245 = null
+material/246 = null
+material/247 = null
+material/248 = null
+material/249 = null
+material/250 = null
+material/251 = null
+material/252 = null
+material/253 = null
+material/254 = null
+material/255 = null
+material/256 = null
+material/257 = null
+material/258 = null
+material/259 = null
+material/260 = null
+material/261 = null
+material/262 = null
+material/263 = null
+material/264 = null
+material/265 = null
+material/266 = null
+material/267 = null
+material/268 = null
+material/269 = null
+material/270 = null
+material/271 = null
+material/272 = null
+material/273 = null
+material/274 = null
+material/275 = null
+material/276 = null
+material/277 = null
+material/278 = null
+material/279 = null
+material/280 = null
+material/281 = null
+material/282 = null
+material/283 = null
+material/284 = null
+material/285 = null
+material/286 = null
+material/287 = null
+material/288 = null
+material/289 = null
+material/290 = null
+material/291 = null
+material/292 = null
+material/293 = null
+material/294 = null
+material/295 = null
+material/296 = null
+material/297 = null
+material/298 = null
+material/299 = null
+material/300 = null
+
+[node name="cheese_RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.729, 0.634, 3.284 )
+mode = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="cheese_RigidBody"]
+transform = Transform( 0.862002, 0, -0.506907, 0, 1, 0, 0.506907, 0, 0.862002, 0.00300419, 0.0417321, 0.00873494 )
+shape = SubResource( 27 )
+
+[node name="burger_cheese_1" type="MeshInstance" parent="cheese_RigidBody"]
+transform = Transform( 0.08, 0, 8.73115e-10, 0, 0.08, 0, -8.73115e-10, 0, 0.08, 0, 0, 0 )
+mesh = ExtResource( 35 )
+material/0 = null
+
+[node name="salad_RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.941, 0.601, 3.261 )
+mode = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="salad_RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00299275, 0.0745243, 2.6226e-05 )
+shape = SubResource( 28 )
+
+[node name="burger_salad" type="MeshInstance" parent="salad_RigidBody"]
+transform = Transform( 0.08, 0, 1.22236e-09, 0, 0.08, 0, -1.22236e-09, 0, 0.08, 0, 0, 0 )
+mesh = ExtResource( 37 )
+material/0 = ExtResource( 40 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+margin_right = 270.0
+margin_bottom = 168.0
+text = "HAMBURGER RECIPE:
+1. bottom bread
+2. meat
+3. cheese
+4. meat
+5. salad
+6. tomato
+7. top bread"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="PanPlacement" to="PanPlacement" method="_on_PanPlacement_body_entered"]
+[connection signal="egg_action_completed" from="PanPlacement" to="TaskController" method="_on_PanPlacement_egg_action_completed"]
+[connection signal="body_entered" from="OmeletPlatePlacement" to="OmeletPlatePlacement" method="_on_OmeletPlatePlacement_body_entered"]
+[connection signal="omelette_action_complete" from="OmeletPlatePlacement" to="TaskController" method="_on_OmeletPlatePlacement_omelette_action_complete"]
+[connection signal="body_entered" from="CuttingBoardPlacement" to="CuttingBoardPlacement" method="_on_CuttingBoardPlacement_body_entered"]
+[connection signal="meat_action_completed" from="CuttingBoardPlacement" to="TaskController" method="_on_CuttingBoardPlacement_meat_action_completed"]
+[connection signal="tomato_action_completed" from="CuttingBoardPlacement" to="TaskController" method="_on_CuttingBoardPlacement_tomato_action_completed"]
+[connection signal="body_entered" from="BurgerPlatePlacement" to="BurgerPlatePlacement" method="_on_BurgerPlatePlacement_body_entered"]
+[connection signal="burger_action_completed" from="BurgerPlatePlacement" to="TaskController" method="_on_BurgerPlatePlacement_burger_action_completed"]

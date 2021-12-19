@@ -11,7 +11,18 @@ bear: https://free3d.com/3d-model/tibetan-blue-bear-v1--80765.html
 outhouse: https://www.cgtrader.com/free-3d-models/exterior/house/old-wooden-rustic-outhouse
 mexica_grass: https://www.cgtrader.com/items/2998464/download-page
 bear2: https://www.cgtrader.com/items/2485227/download-page
-trolley: https://www.cgtrader.com/items/1958169/download-page
+--trolley: https://www.cgtrader.com/items/1958169/download-page
 tree_stump: https://www.cgtrader.com/items/3024034/download-page
 clay_water: https://www.cgtrader.com/items/2981855/download-page
 grass_3d: https://www.cgtrader.com/items/2580223/download-page
+table: https://www.cgtrader.com/items/809269/download-page
+knife: https://www.cgtrader.com/items/1924412/download-page
+pan: https://www.cgtrader.com/items/2026730/download-page
+plate: https://www.cgtrader.com/items/2684507/download-page
+cutting_board: https://www.cgtrader.com/items/3364378/download-page
+egg: https://www.cgtrader.com/items/2059245/download-page
+omelette: https://www.cgtrader.com/items/3439547/download-page
+hamburger: https://www.cgtrader.com/items/2465920/download-page
+
+
+

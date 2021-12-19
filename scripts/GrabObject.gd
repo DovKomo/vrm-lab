@@ -10,18 +10,23 @@ func attempt_grab():
 	var min_dist = 9999.99
 	var potential_obj = null
 	
+	print('grabbable_objects: ', grabbable_objects)
 	for obj in grabbable_objects:
 		var dist = global_transform.origin.distance_to(obj.global_transform.origin)
+		print('obj: ', obj, dist)
 		if dist < min_dist:
 			min_dist = dist
 			potential_obj = obj
+			
 	
+	print('potential_obj: ', potential_obj)
 	var old_transform = potential_obj.global_transform
 	potential_obj.get_parent().remove_child(potential_obj)
 	add_child(potential_obj)
 	grabbed_object = potential_obj
 	grabbed_object.global_transform = old_transform
 	grabbed_object.mode = RigidBody.MODE_KINEMATIC
+	print('object is grabbed')
 
 func attempt_release():
 	if grabbed_object == null:
@@ -40,7 +45,9 @@ func is_grabbing():
 	return grabbed_object != null
 
 func _on_HandOverlap_body_entered(body):
+	print('body: ', body)
 	if body is RigidBody:
+		print('true')
 		grabbable_objects.append(body)
 
 
